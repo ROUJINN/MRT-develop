@@ -9,7 +9,7 @@
 #SBATCH --account=research      # research only
 #SBATCH --time=10:00:00         # total run time limit (HH:MM:SS)
 #SBATCH --mem=100G              # memory
-#SBATCH --output=<YOUR/OUTPUT/PATH>
+#SBATCH --output=./
 
 # Activate your only conda env
 source /scratch/zhaozijing/anaconda3/bin/activate
