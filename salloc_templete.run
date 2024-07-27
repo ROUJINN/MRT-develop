@@ -1,0 +1,1 @@
+salloc -N 1 --cpus-per-task=24 --time 2:00:00 --qos=lv0a --gres=gpu:1 --job-name='tmp' --account=research --partition=DGX --mem=100G

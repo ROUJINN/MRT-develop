@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH --job-name=luojun_sourceonly     # job name
+#SBATCH --nodes=1               # node count
+#SBATCH --ntasks=1              # total number of tasks across all nodes
+#SBATCH --cpus-per-task=48      # cpu-cores per task (>1 if multi-threaded tasks)
+#SBATCH --gres=gpu:1            # number of gpus per node
+#SBATCH --partition=DGX         # DGX: A800; HGX: A100
+#SBATCH --qos=lv0b              # lv0a, lv0b or lv4
+#SBATCH --account=research      # research only
+#SBATCH --time=10:00:00         # total run time limit (HH:MM:SS)
+#SBATCH --mem=100G              # memory
+#SBATCH --output=<YOUR/OUTPUT/PATH>
+
+# Activate your only conda env
+source /scratch/zhaozijing/anaconda3/bin/activate
+conda activate at
+
+# Launch your job
+sh configs/def-detr-base/city2foggy/source_only.sh
