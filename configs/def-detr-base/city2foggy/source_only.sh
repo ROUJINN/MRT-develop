@@ -1,9 +1,9 @@
 N_GPUS=2
 BATCH_SIZE=8
-DATA_ROOT=<YOUR/DATA/ROOT>
+DATA_ROOT=/network_space/server129/zhaozijing/datasets/
 OUTPUT_DIR=./outputs/def-detr-base/city2foggy/source_only
 
-CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 torchrun \
+CUDA_VISIBLE_DEVICES=1,2 OMP_NUM_THREADS=4 torchrun \
 --rdzv_endpoint localhost:26500 \
 --nproc_per_node=${N_GPUS} \
 main.py \
