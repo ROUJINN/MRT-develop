@@ -79,12 +79,10 @@ def check_gradient_numerical(channels=4, grad_value=True, grad_sampling_loc=True
 
 
 if __name__ == '__main__':
-    # check_forward_equal_with_pytorch_double()
-    # check_forward_equal_with_pytorch_float()
+    check_forward_equal_with_pytorch_double()
+    check_forward_equal_with_pytorch_float()
 
-    # for channels in [30, 32, 64, 71, 1025, 2048, 3096]:
-    #     check_gradient_numerical(channels, True, True, True)
+    for channels in [30, 32, 64, 71, 1025, 2048, 3096]:
+         check_gradient_numerical(channels, True, True, True)
 
-    for channels in [2048, 3096]:
-        check_gradient_numerical(channels, True, True, True)
 

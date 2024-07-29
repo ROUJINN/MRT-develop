@@ -1,6 +1,6 @@
 N_GPUS=2
 BATCH_SIZE=8
-DATA_ROOT=<YOUR/DATA/ROOT>
+DATA_ROOT=/scratch/generalvision/zhaozijing/data
 OUTPUT_DIR=./outputs/def-detr-base/city2foggy/teaching
 
 CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=4 torchrun \
